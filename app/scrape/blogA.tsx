@@ -1,4 +1,4 @@
-import { blogContent } from './blog-content';
+import { blogContent } from './blogContent';
 const url = 'https://www.joshwcomeau.com/';
 
 const blogA = () => {
