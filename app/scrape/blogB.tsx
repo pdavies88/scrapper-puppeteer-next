@@ -1,6 +1,6 @@
 'use server';
 import fs from 'fs';
-import { blogContent } from './blog-content';
+import { blogContent } from './blogContent';
 const url = 'https://swizec.com/blog/';
 
 const blogB = () => {
