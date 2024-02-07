@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-const DynamicData = () => {
+const PollingData = () => {
   const router = useRouter();
   // Force refresh the page every 15 seconds for new dynamic content
   useEffect(() => {
@@ -14,4 +14,4 @@ const DynamicData = () => {
   }, [router]);
   return null;
 };
-export default DynamicData;
+export default PollingData;
