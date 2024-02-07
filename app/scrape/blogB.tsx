@@ -3,8 +3,9 @@ import fs from 'fs';
 import { blogContent } from './blogContent';
 const url = 'https://swizec.com/blog/';
 
-const blogB = () => {
-  const dataB = blogContent(url, '.css-zo9vbf', 'h2');
+const blogB = async () => {
+  const dataB = await blogContent(url, '.css-zo9vbf', 'h2');
+  console.log(dataB);
 
   fs.writeFile('dataB.json', JSON.stringify(dataB), (err: any) => {
     if (err) throw err;

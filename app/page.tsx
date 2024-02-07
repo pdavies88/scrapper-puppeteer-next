@@ -1,7 +1,7 @@
-import { main } from './scrape';
+import { blogA } from './scrape/blogA';
 import { dynamicContent } from './scrape/dynamic';
 import { FetchData } from './scrape/FetchData';
-// import DynamicData from './scrape/DynamicData';
+// import PollingData from './scrape/PollingData';
 import FileWrite from './scrape/FileWrite';
 // import cron from 'node-cron';
 
@@ -16,8 +16,7 @@ async function getData() {
 }
 
 export default async function Home() {
-  const data = await main();
-  const { dataA } = data;
+  const dataA = await blogA();
 
   const dynamicRefresh = await dynamicContent();
 
@@ -33,7 +32,7 @@ export default async function Home() {
 
   return (
     <main className='flex flex-col p-24'>
-      {/* <DynamicData /> */}
+      {/* <PollingData /> */}
       <h2>Josh Comeau Articles</h2>
       <div className='p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4'>
         {dataA &&
